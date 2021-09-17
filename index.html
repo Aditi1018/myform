@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Inconsolata:wght@600&family=Prompt:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="regis.css">
+    <script type="text/javascript">
+   
+function myfun(){
+    var a = document.myform.pwd.value;
+    var b = document.myform.cpwd.value;
+    if(a==0){
+        document.getElementById('msg').innerHTML="**must provide password**";
+    }
+    else{
+
+    }
+if(a==b){
+    document.getElementById('cmsg').innerHTML="**Passwords match**";
+}
+else{
+    document.getElementById('cmsg').innerHTML="**Password does not match**";
+}
+}
+
+    </script>
+</head>
+<body>
+    
+    <div class="loginbox">
+    <h1 align='center'>FORM</h1>
+    
+    <table align='center' >
+        <form name="myform" method="post" onsubmit="validateform()">
+            <tr>
+                <td align="center">First Name</td>
+            <td><input type="text" name="fnm" placeholder="enter first name"required="true" ></td>
+            </tr>
+        </tr>
+        <tr>
+            <td align="center">Last Name</td>
+            <td><input type="text" name="lnm"placeholder="enter last name"></td>
+        </tr>
+        <tr>
+            <td align="center">Email</td>
+            <td><input type="email" name="eml"placeholder="enter email"></td>
+        </tr>
+        <tr>
+            <tr>
+                <td  align="center">Passward</td>
+                <td><input type="password" name="pwd" id=""required="true" placeholder="User Passward"  onkeyup="myfun()"><span id="msg" style="color: rgb(226, 120, 0);"></span></td>
+            </tr>
+            <tr>
+                <td  align="center"> Confirm Passward</td>
+                <td><input type="password" name="cpwd" id=""required="true" placeholder="Rewrite Passward" onkeyup="myfun()"><span id="cmsg" style="color: rgb(226, 120, 0);"></span></td>
+            </tr>
+            <tr>
+                <th colspan="2" align='center'><input type="submit" value="submit here!!!" name="sBtn"></th>
+                </tr>
+        </form>
+    </table>
+    </div>
+    
+        
+    </body>
+    </html>
